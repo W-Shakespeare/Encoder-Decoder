@@ -1,0 +1,73 @@
+.px {
+  animation: px 60s linear 6s infinite normal none;
+  opacity: 0;
+  margin: 0px;
+  display: flex;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: hsl(180, 100%, 50%);
+}
+.Page {
+  animation: pag 3s linear 0s infinite normal none;
+  background: linear-gradient(
+    50deg,
+    hsl(180, 80%, 70%),
+    hsl(180, 100%, 50%),
+    hsl(235, 80%, 90%),
+    hsl(260, 90%, 70%),
+    hsl(280, 100%, 60%)
+  );
+  /* background-color: hsl(0,0%,0%); */
+  /* background-color: green !important; */
+  width: 100%;
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "text"
+    "encoder"
+    "decoder";
+}
+.text {
+  grid-area: text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: monospace;
+  font-size: 20px;
+}
+.encoder {
+  padding-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: encoder;
+  /* background-color: aqua; */
+}
+.decoder {
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: decoder;
+  /* background-color:darkblue; */
+}
+
+.inp {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: monospace;
+  color: hsl(0, 0%, 0%);
+  background: linear-gradient(56deg, hsl(180, 60%, 70%), hsl(260, 80%, 70%));
+  /* background-color: blueviolet; */
+  outline: none;
+  width: 30%;
+  height: 30%;
+  border-radius: 50px;
+  border-color: hsl(180, 60%, 70%);
+}
