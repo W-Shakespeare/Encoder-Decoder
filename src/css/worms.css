@@ -1,213 +1,188 @@
 .worm0 {
-    
-    margin: 0px;
-    position: absolute;
-    animation: worm0 3s linear 0s infinite normal none; 
-    width: 15px;
-    height: 5px;
-    /* background-color: black; */
-    display: flex;
-    flex-direction: row-reverse;
-    border-radius: 20px;
-    /* border: 2px solid; */
-
+  margin: 0px;
+  position: absolute;
+  animation: worm0 3s linear 0s infinite normal none;
+  width: 15px;
+  height: 5px;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 20px;
+  /* border: 2px solid; */
 }
-.worm{
-    background-color: hsl(180,100%,50%) !important;
-    animation: worm 3s linear 0s infinite normal none ;
-    position: relative;
-    border-radius: 40px;
-    width: 100%;
-    /* height: 100%; */
+.worm {
+  background-color: hsl(180, 100%, 50%) !important;
+  animation: worm 3s linear 0s infinite normal none;
+  position: relative;
+  border-radius: 40px;
+  width: 100%;
+  /* height: 100%; */
 }
 .w1 {
-    width: 100%;
-    background-color: green;
+  width: 100%;
+  background-color: green;
 }
 
 .w2 {
-    animation: w2 3s linear 0s infinite normal none; 
-    width: 100%;
-    background-color: blue;
+  animation: w2 3s linear 0s infinite normal none;
+  width: 100%;
+  background-color: blue;
 }
 .w3 {
-    animation: w3 3s linear 0s infinite normal none; 
-    width: 100%;
-    background-color: blueviolet;
+  animation: w3 3s linear 0s infinite normal none;
+  width: 100%;
+  background-color: blueviolet;
 }
 .w4 {
-    animation: w4 3s linear 0s infinite normal none; 
-    width: 100%;
-    background-color: orange;
+  animation: w4 3s linear 0s infinite normal none;
+  width: 100%;
+  background-color: orange;
 }
 .w5 {
-    width: 100%;
-    background-color: red;
+  width: 100%;
+  background-color: red;
 }
 @keyframes worm0 {
-    0%{
-        width: 15px
-    }
-    25% {
-        width: 9px;
-     
-    }
-    50%{
-        
-        width: 15px
-    }
-    75% {
-        width: 9px
-    }
-        100%{
-            width: 15px
-         
-     }
-    } 
-
-
-@keyframes worm{
-    0%{
-        width: 100%;
-    }
-    25% {
-        width: 75%;
-        
-    }
-    50%{
-        width: 100%;
-    }
-    75% {
-        width: 75%;
-        
-    }
-        100%{
-            width: 100%;
-         
-     }
-    }
-
-
-@keyframes w2{
-    0%{
-        top: 0px;
-    }
-    25% {
-        width: 50%;
-        top:-1.5px;
-    }
-    50%{
-        top:0px;
-        width: 100%;
-    }
-    75% {
-        width: 50%;
-        top:-1.5px;
-    }
-        100%{
-            top:0px;
-            width: 100%;
-         
-     }
-    }
-
-
-@keyframes w3{
-    
-    0%{
-        top: 0px;
-    }
-    25% {
-        width: 50%;
-        top:-3px;
-    }
-    50%{
-        top:0px;
-        width: 100%;
-    }
-    75% {
-        width: 50%;
-        top:-3px;
-    }
-        100%{
-            top:0px;
-            width: 100%;
-         
-     }
-    }
-    @keyframes w4{
-        
-    0%{
-        top: 0px;
-    }
-    25% {
-        width: 50%;
-        top:-1.5px;
-    }
-    50%{
-        top:0px;
-        width: 100%;
-    }
-    75% {
-        width: 50%;
-        top:-1.5px;
-    }
-        100%{
-            top:0px;
-            width: 100%;
-         
-     }
-    }
-  
-    .wor {
-        opacity: 0;
-        /* background-color: white; */
-        margin: 0px;
-    position: absolute;
-    animation: wor 60s linear 6s infinite normal none; 
+  0% {
     width: 15px;
-    height: 5px;
-    /* background-color: black; */
-    display: flex;
-    
-    
-    /* border: 2px solid; */ 
-    }
+  }
+  25% {
+    width: 9px;
+  }
+  50% {
+    width: 15px;
+  }
+  75% {
+    width: 9px;
+  }
+  100% {
+    width: 15px;
+  }
+}
 
-@keyframes wor{
-    0%{
-        opacity: 1;
-        right: 0px;
-    }    
-    
-    
-    90%{
-        opacity: 1;
-    }
-        100%{
-            opacity: 0;
-            right: 500px;
-         
-     }
-    }
+@keyframes worm {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 75%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 
-    @keyframes px{
-        0%{
-            right: 0px;
-        }
-        24%{
-            right: 125px;
-                opacity: 0;
-        }
-            25%{
-                right: 127px;
-                opacity: 1;
-            }
-        
-            100%{
-                right: 127px;
-                opacity: 0.1;
-             
-         }
-        }
-    
+@keyframes w2 {
+  0% {
+    top: 0px;
+  }
+  25% {
+    width: 50%;
+    top: -1.5px;
+  }
+  50% {
+    top: 0px;
+    width: 100%;
+  }
+  75% {
+    width: 50%;
+    top: -1.5px;
+  }
+  100% {
+    top: 0px;
+    width: 100%;
+  }
+}
+
+@keyframes w3 {
+  0% {
+    top: 0px;
+  }
+  25% {
+    width: 50%;
+    top: -3px;
+  }
+  50% {
+    top: 0px;
+    width: 100%;
+  }
+  75% {
+    width: 50%;
+    top: -3px;
+  }
+  100% {
+    top: 0px;
+    width: 100%;
+  }
+}
+@keyframes w4 {
+  0% {
+    top: 0px;
+  }
+  25% {
+    width: 50%;
+    top: -1.5px;
+  }
+  50% {
+    top: 0px;
+    width: 100%;
+  }
+  75% {
+    width: 50%;
+    top: -1.5px;
+  }
+  100% {
+    top: 0px;
+    width: 100%;
+  }
+}
+
+.wor {
+  opacity: 0;
+  margin: 0px;
+  position: absolute;
+  animation: wor 60s linear 6s infinite normal none;
+  width: 15px;
+  height: 5px;
+  display: flex;
+}
+
+@keyframes wor {
+  0% {
+    opacity: 1;
+    right: 0px;
+  }
+
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    right: 500px;
+  }
+}
+
+@keyframes px {
+  0% {
+    right: 0px;
+  }
+  24% {
+    right: 125px;
+    opacity: 0;
+  }
+  25% {
+    right: 127px;
+    opacity: 1;
+  }
+
+  100% {
+    right: 127px;
+    opacity: 0.1;
+  }
+}

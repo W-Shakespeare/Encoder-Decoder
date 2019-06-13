@@ -1,93 +1,31 @@
 import React from "react";
 import EncoderComponent from "./encoderComponent";
+import russianAlphabet from "./russianAlphabet";
+
 function encoder() {
-  var enc = document.getElementById("source-enc");
-  enc.addEventListener("keyup", allEncod);
-
-  function allEncod() {
-    var Russian_alphabet = [
-      "а",
-      "б",
-      "в",
-      "г",
-      "д",
-      "е",
-      "ё",
-      "ж",
-      "з",
-      "и",
-      "й",
-      "к",
-      "л",
-      "м",
-      "н",
-      "о",
-      "п",
-      "р",
-      "с",
-      "т",
-      "у",
-      "ф",
-      "х",
-      "ц",
-      "ч",
-      "ш",
-      "щ",
-      "ъ",
-      "ы",
-      "ь",
-      "э",
-      "ю",
-      "я",
-      "!",
-      "?",
-      "."
-    ];
-
-    function sum_mas2(arr) {
-      for (var i = 0; i < arr.length; i++) {
-        resultEnc.value += arr[i];
-
-        //Output += arr[i];
+  let srcEncoder = document.getElementById("source-enc");
+  let srcEncoderValue = srcEncoder.value;
+  let srcArrEncoderValue = srcEncoderValue.split("");
+  let resultEncoderValue = srcArrEncoderValue.reduce((acc, next) => {
+    acc.push(cesarEncoder(next));
+    return acc;
+  }, []);
+  let resultInputEncoder = document.getElementById("result-enc");
+  resultInputEncoder.value = resultEncoderValue.join("");
+  function cesarEncoder(next) {
+    let newPosition;
+    russianAlphabet.forEach((item, i) => {
+      if (item == next) {
+        newPosition = russianAlphabet[i - 1];
       }
-    }
-
-    function Encoder(mas) {
-      for (var i = 0; i < Russian_alphabet.length; i++) {
-        if (mas == Russian_alphabet[0]) {
-          var ya = ".";
-          mas2.push(ya);
-          break;
-        } else if (mas == Russian_alphabet[i]) {
-          mas2.push(Russian_alphabet[i - 1]);
-          break;
-        } else if (mas == " ") {
-          var _ = " ";
-          mas2.push(_);
-          break;
-        }
+      if ("а" == next) {
+        newPosition = " ";
       }
-    }
-
-    var Output = "";
-    var resultEnc = document.getElementById("result-enc");
-    resultEnc.value = Output;
-    var mas2 = [];
-    var k1 = enc.value;
-    var mas = [];
-    var k2;
-    for (var i = 0; i < k1.length; i++) {
-      k2 = k1[i];
-      mas.push(k2);
-      Encoder(mas[i]);
-    }
-
-    sum_mas2(mas2);
-
-    console.log(mas);
-    console.log(mas2);
+    });
+    return newPosition;
   }
 }
+
 function EncoderContainer(props) {
   return <EncoderComponent encoder={encoder} />;
 }
