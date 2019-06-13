@@ -21,14 +21,12 @@ function EncoderComponent(props) {
         id="source-enc"
         className="src-enc inp"
         type="text"
-        //value=""
         placeholder="Введите текс для шифровки"
       />
       <input
         id="result-enc"
         className="res-enc inp"
         type="text"
-        //value=""
         placeholder="Зашифрованое"
       />
     </div>
