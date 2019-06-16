@@ -1,4 +1,3 @@
-This project was bootstrapped with [Create React App]
 This is Caesar's algorithm.
 It is made using JS, React.js, HTML, CSS.
 
