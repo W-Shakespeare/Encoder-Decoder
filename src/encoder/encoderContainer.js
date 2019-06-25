@@ -1,6 +1,6 @@
 import React from "react";
 import EncoderComponent from "./encoderComponent";
-import russianAlphabet from "./russianAlphabet";
+import symbols from "./symbols";
 
 function encoder() {
   let srcEncoder = document.getElementById("source-enc");
@@ -14,9 +14,9 @@ function encoder() {
   resultInputEncoder.value = resultEncoderValue.join("");
   function cesarEncoder(next) {
     let newPosition;
-    russianAlphabet.forEach((item, i) => {
+    symbols.forEach((item, i) => {
       if (item == next) {
-        newPosition = russianAlphabet[i - 1];
+        newPosition = symbols[i - 1];
       }
       if ("а" == next) {
         newPosition = " ";

@@ -1,22 +1,22 @@
 import React from "react";
 import DecoderComponent from "./decoderComponent";
-import russianAlphabet from "./russianAlphabet";
+import symbols from "./symbols";
 
 function decoder() {
   let srcDecoder = document.getElementById("source-dec");
   let srcDecoderValue = srcDecoder.value;
   let srcArrDecoderValue = srcDecoderValue.split("");
   let resultDecoderValue = srcArrDecoderValue.reduce((acc, next) => {
-    acc.push(cesarEncoder(next));
+    acc.push(cesarDecoder(next));
     return acc;
   }, []);
   let resultInputDecoder = document.getElementById("result-dec");
   resultInputDecoder.value = resultDecoderValue.join("");
-  function cesarEncoder(next) {
+  function cesarDecoder(next) {
     let newPosition;
-    russianAlphabet.forEach((item, i) => {
+    symbols.forEach((item, i) => {
       if (item == next) {
-        newPosition = russianAlphabet[i + 1];
+        newPosition = symbols[i + 1];
       }
       if (" " == next) {
         newPosition = "а";
