@@ -1,3 +1,9 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .px {
   animation: px 60s linear 6s infinite normal none;
   opacity: 0;
@@ -10,16 +16,19 @@
 }
 .Page {
   animation: pag 3s linear 0s infinite normal none;
-  background: linear-gradient(
+  /* background: linear-gradient(
     50deg,
     hsl(180, 80%, 70%),
     hsl(180, 100%, 50%),
     hsl(235, 80%, 90%),
+    hsl(180, 80%, 70%),
     hsl(260, 90%, 70%),
-    hsl(280, 100%, 60%)
-  );
+    hsl(280, 100%, 60%) */
+  /* ); */
+  background-image: url(https://bipbap.ru/wp-content/uploads/2017/04/azorskie-ostrova-v-portugalii-1.jpg);
+  background-size: 100%;
   width: 100%;
-  min-height: 700px;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -37,8 +46,10 @@
   font-family: monospace;
   font-size: 20px;
 }
+.text p {
+  color: white;
+}
 .encoder {
-  padding-left: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +57,6 @@
   grid-area: encoder;
 }
 .decoder {
-  padding-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,10 +69,9 @@
   font-size: 20px;
   font-family: monospace;
   color: hsl(0, 0%, 0%);
-  background: linear-gradient(56deg, hsl(180, 60%, 70%), hsl(260, 80%, 70%));
   outline: none;
-  width: 30%;
-  height: 30%;
-  border-radius: 50px;
+  width: 310px;
+  height: 50px;
+  border-radius: 10px;
   border-color: hsl(180, 60%, 70%);
 }

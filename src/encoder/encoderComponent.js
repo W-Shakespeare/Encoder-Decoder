@@ -1,9 +1,7 @@
 import React from "react";
-function y() {
-  console.log(1120);
-}
+import Inp from "../inp";
 
-function EncoderComponent(props) {
+function EncoderComponent({ onChange, value, valueEncoder }) {
   return (
     <div className="encoder">
       <div className="px" />
@@ -16,18 +14,17 @@ function EncoderComponent(props) {
           <div className="worm w5" />
         </div>
       </div>
-      <input
-        onChange={props.encoder}
-        id="source-enc"
+      <Inp
         className="src-enc inp"
-        type="text"
         placeholder="Введите текс для шифровки"
+        onChange={onChange}
+        value={value}
       />
-      <input
+      <Inp
         id="result-enc"
         className="res-enc inp"
-        type="text"
         placeholder="Зашифрованое"
+        value={valueEncoder}
       />
     </div>
   );
