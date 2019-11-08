@@ -1,20 +1,20 @@
 import React from "react";
+import Inp from "../inp";
 
-function DecoderComponent(props) {
+function DecoderComponent({ onChange, value, valueDecoder }) {
   return (
     <div className="decoder">
-      <input
-        onChange={props.decoder}
-        id="source-dec"
+      <Inp
+        onChange={onChange}
         className="src-dec inp"
-        type="text"
         placeholder="Введите текс для расшифровки"
+        value={value}
       />
-      <input
-        id="result-dec"
+      <Inp
         className="res-dec inp"
-        type="text"
         placeholder="Расшифрованное"
+        value={valueDecoder}
+      />
       />
     </div>
   );
