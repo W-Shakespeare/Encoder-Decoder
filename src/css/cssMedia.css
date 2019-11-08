@@ -1,0 +1,21 @@
+@media (max-width: 375px) {
+  .text p {
+    font-size: 19px;
+  }
+  .inp {
+    width: 280px;
+    font-size: 17px;
+    text-align: center;
+  }
+}
+@media (max-width: 325px) {
+  .text p {
+    color: white;
+    font-size: 17px;
+  }
+  .inp {
+    width: 270px;
+    font-size: 15px;
+    text-align: center;
+  }
+}
